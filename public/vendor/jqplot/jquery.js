@@ -175,7 +175,7 @@ jQuery.fn = jQuery.prototype = {
 					// Check parentNode to catch when Blackberry 4.6 returns
 					// nodes that are no longer in the document #6963
 					if ( elem && elem.parentNode ) {
-						// Handle the case where IE and Fal return items
+						// Handle the case where IE and Opera return items
 						// by name instead of ID
 						if ( elem.id !== match[2] ) {
 							return rootjQuery.find( selector );
@@ -1428,7 +1428,7 @@ jQuery.support = (function() {
 	support.checkClone = fragment.cloneNode( true ).cloneNode( true ).lastChild.checked;
 
 	// Support: IE<9
-	// Fal does not clone events (and typeof div.attachEvent === undefined).
+	// Opera does not clone events (and typeof div.attachEvent === undefined).
 	// IE9-10 clones events bound via attachEvent, but they don't trigger with .click()
 	if ( div.attachEvent ) {
 		div.attachEvent( "onclick", function() {
@@ -3919,7 +3919,7 @@ function Sizzle( selector, context, results, seed ) {
 					// Check parentNode to catch when Blackberry 4.6 returns
 					// nodes that are no longer in the document #6963
 					if ( elem && elem.parentNode ) {
-						// Handle the case where IE, Fal, and Webkit return items
+						// Handle the case where IE, Opera, and Webkit return items
 						// by name instead of ID
 						if ( elem.id === m ) {
 							results.push( elem );
@@ -4045,7 +4045,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 	// Check if getElementsByClassName can be trusted
 	support.getByClassName = assert(function( div ) {
-		// Fal can't find a second classname (in 9.6)
+		// Opera can't find a second classname (in 9.6)
 		div.innerHTML = "<div class='hidden e'></div><div class='hidden'></div>";
 		if ( !div.getElementsByClassName || !div.getElementsByClassName("e").length ) {
 			return false;
@@ -4173,7 +4173,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 	// QSA and matchesSelector support
 
-	// matchesSelector(:active) reports false when true (IE9/Fal 11.5)
+	// matchesSelector(:active) reports false when true (IE9/Opera 11.5)
 	rbuggyMatches = [];
 
 	// qSa(:focus) reports false when true (Chrome 21),
@@ -4197,7 +4197,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				rbuggyQSA.push( "\\[" + whitespace + "*(?:checked|disabled|ismap|multiple|readonly|selected|value)" );
 			}
 
-			// Webkit/Fal - :checked should return selected option elements
+			// Webkit/Opera - :checked should return selected option elements
 			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
 			// IE8 throws error here and will not see later tests
 			if ( !div.querySelectorAll(":checked").length ) {
@@ -4207,7 +4207,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 		assert(function( div ) {
 
-			// Fal 10-12/IE8 - ^= $= *= and empty values
+			// Opera 10-12/IE8 - ^= $= *= and empty values
 			// Should not select anything
 			div.innerHTML = "<input type='hidden' i=''/>";
 			if ( div.querySelectorAll("[i^='']").length ) {
@@ -4220,7 +4220,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				rbuggyQSA.push( ":enabled", ":disabled" );
 			}
 
-			// Fal 10-11 does not throw on post-comma invalid pseudos
+			// Opera 10-11 does not throw on post-comma invalid pseudos
 			div.querySelectorAll("*,:x");
 			rbuggyQSA.push(",.*:");
 		});
@@ -7255,8 +7255,8 @@ jQuery(function() {
 
 if ( jQuery.expr && jQuery.expr.filters ) {
 	jQuery.expr.filters.hidden = function( elem ) {
-		// Support: Fal <= 12.12
-		// Fal reports offsetWidths and offsetHeights less than zero on some elements
+		// Support: Opera <= 12.12
+		// Opera reports offsetWidths and offsetHeights less than zero on some elements
 		return elem.offsetWidth <= 0 && elem.offsetHeight <= 0 ||
 			(!jQuery.support.reliableHiddenOffsets && ((elem.style && elem.style.display) || jQuery.css( elem, "display" )) === "none");
 	};
@@ -8485,7 +8485,7 @@ if ( xhrSupported ) {
 						xhr = s.xhr();
 
 					// Open the socket
-					// Passing null username, generates a login popup on Fal (#2865)
+					// Passing null username, generates a login popup on Opera (#2865)
 					if ( s.username ) {
 						xhr.open( s.type, s.url, s.async, s.username, s.password );
 					} else {
@@ -9117,7 +9117,7 @@ jQuery.fn.extend({
 		var empty = jQuery.isEmptyObject( prop ),
 			optall = jQuery.speed( speed, easing, callback ),
 			doAnimation = function() {
-				// Falte on a copy of prop so per-property easing won't be lost
+				// Operate on a copy of prop so per-property easing won't be lost
 				var anim = Animation( this, jQuery.extend( {}, prop ), optall );
 				doAnimation.finish = function() {
 					anim.stop( true );

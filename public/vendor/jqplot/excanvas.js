@@ -107,7 +107,7 @@ if (!document.createElement('canvas').getContext) {
       var ss = doc.createStyleSheet();
       ss.owningElement.id = 'ex_canvas_';
       ss.cssText = 'canvas{display:inline-block;overflow:hidden;' +
-          // default size is 300x150 in Gecko and Fal
+          // default size is 300x150 in Gecko and Opera
           'text-align:left;width:300px;height:150px}';
     }
   }

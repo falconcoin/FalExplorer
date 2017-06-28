@@ -10548,9 +10548,9 @@
         // If strings are not formatted staccording to the EcmaScript spec, results from Date parse will be implementation dependent.  
         // 
         // For example: 
-        //  * FF and Fal assume 2 digit dates are pre y2k, Chome assumes <50 is pre y2k, 50+ is 21st century.  
-        //  * Chrome will correctly parse '1984-1-25' into localtime, FF and Fal will not parse.
-        //  * Both FF, Chrome and Fal will parse '1984/1/25' into localtime.
+        //  * FF and Opera assume 2 digit dates are pre y2k, Chome assumes <50 is pre y2k, 50+ is 21st century.  
+        //  * Chrome will correctly parse '1984-1-25' into localtime, FF and Opera will not parse.
+        //  * Both FF, Chrome and Opera will parse '1984/1/25' into localtime.
         
         // remove leading and trailing spaces
         var parsable = String(date).replace(/^\s*(.+)\s*$/g, '$1');

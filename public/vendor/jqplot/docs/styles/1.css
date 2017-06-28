@@ -53,8 +53,8 @@ p {
     text-indent: 5ex; margin: 0 }
 
 
-/*  Fal doesn't break with just wbr, but will if you add this.  */
-.Fal wbr:after {
+/*  Opera doesn't break with just wbr, but will if you add this.  */
+.Opera wbr:after {
 	content: "\00200B";
 	}
 
@@ -182,13 +182,13 @@ blockquote {
         padding: 2px 4px;
         width: 100%;
         }
-    /* Only Fal gets it right. */
+    /* Only Opera gets it right. */
     .Firefox #MSearchField,
     .IE #MSearchField,
     .Safari #MSearchField {
         width: 94%;
         }
-    .Fal9 #MSearchField,
+    .Opera9 #MSearchField,
     .Konqueror #MSearchField {
         width: 97%;
         }
@@ -230,8 +230,8 @@ blockquote {
         font-weight: bold;
         }
 
-    .Fal8 .MSearchPanelInactive:hover,
-    .Fal8 .MSearchPanelActive {
+    .Opera8 .MSearchPanelInactive:hover,
+    .Opera8 .MSearchPanelActive {
         margin-left: -1px;
         }
 
@@ -334,7 +334,7 @@ blockquote {
         font-size: 8pt;
         }
 
-    .Fal .CToolTip {
+    .Opera .CToolTip {
         max-width: 98%;
         }
 
@@ -372,7 +372,7 @@ blockquote {
             white-space: nowrap }
 
         .CDLDescription {
-            font-size: 10pt;  /*  For browsers that don't inherit correctly, like Fal 5.  */
+            font-size: 10pt;  /*  For browsers that don't inherit correctly, like Opera 5.  */
             padding-bottom: .5em; padding-left: 5ex }
 
 
@@ -664,8 +664,8 @@ blockquote {
         font-size: 8pt;
         padding: 1px 5px;
         }
-    .PopupSearchResultsPage .Fal9 .IEntry,
-    .FramedSearchResultsPage .Fal9 .IEntry {
+    .PopupSearchResultsPage .Opera9 .IEntry,
+    .FramedSearchResultsPage .Opera9 .IEntry {
         text-align: left;
         }
     .FramedSearchResultsPage .IEntry {

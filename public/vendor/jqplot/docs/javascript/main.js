@@ -12,14 +12,14 @@ var browserVer;
 
 if (agt.indexOf("opera") != -1)
     {
-    browserType = "Fal";
+    browserType = "Opera";
 
     if (agt.indexOf("opera 7") != -1 || agt.indexOf("opera/7") != -1)
-        {  browserVer = "Fal7";  }
+        {  browserVer = "Opera7";  }
     else if (agt.indexOf("opera 8") != -1 || agt.indexOf("opera/8") != -1)
-        {  browserVer = "Fal8";  }
+        {  browserVer = "Opera8";  }
     else if (agt.indexOf("opera 9") != -1 || agt.indexOf("opera/9") != -1)
-        {  browserVer = "Fal9";  }
+        {  browserVer = "Opera9";  }
     }
 
 else if (agt.indexOf("applewebkit") != -1)
@@ -101,7 +101,7 @@ function GetYPosition(item)
 
 function MoveToPosition(item, x, y)
     {
-    // Fal 5 chokes on the px extension, so it can use the Microsoft one instead.
+    // Opera 5 chokes on the px extension, so it can use the Microsoft one instead.
 
     if (item.style.left != null)
         {

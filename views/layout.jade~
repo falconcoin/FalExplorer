@@ -168,11 +168,11 @@ html
               strong #{settings.locale.ex_supply} (#{settings.symbol})
             .panel-body
               if settings.index.difficulty == 'Hybrid'
-               label#supply - 
+               2000000000
                <br>
                label#lblX1
               else
-               label#supply -  
+               2000000000
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
@@ -212,7 +212,7 @@ html
         ul.nav
           li.text-center(style='margin-left:80px;margin-right:80px;')
             p(style='margin-top:15px;') 
-              a.navbar-link(href='https://github.com/iquidus/explorer', target='_blank') Powered by Iquidus Explorer 
+              a.navbar-link(href='https://github.com/soloscoin', target='_blank') Powered by SolosCoin Developers 
       span.connections
         label#lblBlockcount.label.label-default -
         label#lblConnections.label.label-default -
